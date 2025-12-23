@@ -1,4 +1,9 @@
-import pyautogui
+import os
+if os.getenv("DISPLAY"):
+    import pyautogui
+else:
+    pyautogui = None
+
 from typing import Callable, Dict
 
 
